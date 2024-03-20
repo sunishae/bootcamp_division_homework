@@ -6,7 +6,20 @@
 #include <stdio.h>
 
 int main() {
-    // 이곳에 코드를 작성해주세요!
+    char c;
+    char vowels[5] = {'a','e','i','o','u'};
+
+    scanf("%c",&c);
+    int flag = 0;
+    for(int i = 0; i<5; i++){
+        if(c == vowels[i]){
+            flag = 1;
+            break;
+        }
+    }
+
+    if(flag == 0)   printf("X");
+    else            printf("O");   
 
     return 0;
 }

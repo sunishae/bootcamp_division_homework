@@ -6,7 +6,17 @@
 #include <stdio.h>
 
 int main() {
-    // 이곳에 코드를 작성해주세요!
+    int months[13] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+    int year;
+    int month;
+
+    scanf("%d",&year);
+    scanf("%d",&month);
+
+    if(((year % 4 == 0) && (year % 100 !=0)) || (year % 400 == 0))
+        months[2]++;
+    
+    printf("%d", months[month]);
 
     return 0;
 }
